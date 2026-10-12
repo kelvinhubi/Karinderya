@@ -56,9 +56,25 @@ Join our community of developers creating universal apps.
 - [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
 
 - Project Requirements:
-
+  Play micheal jackson song
 - Components needed: Generic Button, navigation menu, Text, View
 
 Modules For Admin:
 Dashboard (Contains revenue statistics, orders statistics, popularity, order popularity stats),
-Food Menu (Contains a sub module for crud menu, food menu planning for every day)
+Food Menu (Contains a sub module for crud menu, food menu planning for every day),
+
+Modules For Client:
+
+Dashboard Menu for today
+Menu for tomorrow
+Popular orders
+
+File Structure:
+
+AdminFolder:
+\_layout.tsx
+
+CustomerFolder:
+\_layout.tsx
+
+index.tsx
