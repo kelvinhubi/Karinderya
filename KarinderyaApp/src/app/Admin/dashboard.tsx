@@ -3,7 +3,10 @@ import { createContext } from "react";
 export default function Index() {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Admin Screen</Text>
+      <Text style={styles.text}>revenue statistics</Text>
+      <Text style={styles.text}>orders statistics</Text>
+      <Text style={styles.text}>order popularity stats thid day</Text>
+      <Text style={styles.text}> order popularity stats this month</Text>
     </View>
   );
 }

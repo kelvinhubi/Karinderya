@@ -5,6 +5,8 @@ export default function Index() {
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Home screen</Text>
+
+      <Link href="/Admin/dashboard">Go to Admin</Link>
       {/* <Link href="/admin">Go to Admin</Link>
       <Link href="/customer">Go to Customer</Link>
       <Link href="/Modules/menu" style={styles.link}>
