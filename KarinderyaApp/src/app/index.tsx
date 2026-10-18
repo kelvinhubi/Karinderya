@@ -9,11 +9,12 @@ import { Link, router } from "expo-router";
 import { createContext, useState } from "react";
 import { useRouter } from "expo-router";
 import { SafeAreaView } from "react-native-safe-area-context";
-export default function Index() {
+import { HomeContent } from "@/app/HomeComponents/Content";
+const index = () => {
   let [isContinue, setContinue] = useState(false);
 
   return (
-    <SafeAreaView className="bg-orange-500">
+    <SafeAreaView className="flex-1 bg-orange-500">
       <View className="flex-row items-center justify-between px-4 py-3 border-b border-slate-700">
         {/* Brand / Logo */}
         <Text className="text-white text-xl font-bold">Karinderya App</Text>
@@ -33,6 +34,9 @@ export default function Index() {
           </TouchableOpacity>
         </View>
       </View>
+
+      {/* Content */}
+      <HomeContent />
     </SafeAreaView>
 
     // <View style={styles.container}>
@@ -72,7 +76,7 @@ export default function Index() {
     //   </Link> */}
     // </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {
@@ -91,3 +95,4 @@ const styles = StyleSheet.create({
     fontSize: 12,
   },
 });
+export default index;
