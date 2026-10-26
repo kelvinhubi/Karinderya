@@ -36,7 +36,7 @@ export default function LoginScreen() {
   };
 
   return (
-    <SafeAreaView className="flex-1 bg-orange-50">
+    <SafeAreaView className="flex-1 bg-background">
       <KeyboardAvoidingView
         className="flex-1"
         behavior={Platform.OS === "ios" ? "padding" : undefined}
@@ -47,22 +47,22 @@ export default function LoginScreen() {
           keyboardShouldPersistTaps="handled"
         >
           <View className="mb-10">
-            <View className="mb-6 h-16 w-16 items-center justify-center rounded-2xl bg-orange-600 shadow-sm">
+            <View className="mb-6 h-16 w-16 items-center justify-center rounded-2xl bg-accent shadow-sm">
               <Text className="text-3xl">🍲</Text>
             </View>
-            <Text className="text-sm font-semibold uppercase tracking-widest text-orange-600">
+            <Text className="text-sm font-semibold uppercase tracking-widest text-accent">
               Karinderya
             </Text>
-            <Text className="mt-2 text-4xl font-bold leading-tight text-slate-900">
+            <Text className="mt-2 text-4xl font-bold leading-tight text-primaryText">
               Welcome back
             </Text>
-            <Text className="mt-3 text-base leading-6 text-slate-600">
+            <Text className="mt-3 text-base leading-6 text-secondaryText">
               Sign in to manage your meals and keep your day moving.
             </Text>
           </View>
 
-          <View className="rounded-3xl bg-white p-6 shadow-sm">
-            <Text className="mb-2 text-sm font-semibold text-slate-700">
+          <View className="rounded-3xl bg-surface p-6 shadow-sm">
+            <Text className="mb-2 text-sm font-semibold text-primaryText">
               Email address
             </Text>
             <TextInput
@@ -75,13 +75,13 @@ export default function LoginScreen() {
               autoComplete="email"
               keyboardType="email-address"
               placeholder="you@example.com"
-              placeholderTextColor="#94a3b8"
-              className="mb-5 rounded-2xl border border-slate-200 bg-slate-50 px-4 py-4 text-base text-slate-900"
+              placeholderTextColor="#707070"
+              className="mb-5 rounded-2xl border border-background bg-background px-4 py-4 text-base text-primaryText"
               returnKeyType="next"
             />
 
             <View className="mb-2 flex-row items-center justify-between">
-              <Text className="text-sm font-semibold text-slate-700">
+              <Text className="text-sm font-semibold text-primaryText">
                 Password
               </Text>
               <Pressable
@@ -90,7 +90,7 @@ export default function LoginScreen() {
                 onPress={() => setShowPassword((visible) => !visible)}
                 hitSlop={8}
               >
-                <Text className="text-sm font-semibold text-orange-600">
+                <Text className="text-sm font-semibold text-accent">
                   {showPassword ? "Hide" : "Show"}
                 </Text>
               </Pressable>
@@ -104,9 +104,9 @@ export default function LoginScreen() {
               autoCapitalize="none"
               autoComplete="password"
               placeholder="Enter your password"
-              placeholderTextColor="#94a3b8"
+              placeholderTextColor="#707070"
               secureTextEntry={!showPassword}
-              className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-4 text-base text-slate-900"
+              className="rounded-2xl border border-background bg-background px-4 py-4 text-base text-primaryText"
               returnKeyType="done"
               onSubmitEditing={handleLogin}
             />
@@ -114,7 +114,7 @@ export default function LoginScreen() {
             {errorMessage ? (
               <Text
                 accessibilityRole="alert"
-                className="mt-3 text-sm leading-5 text-red-600"
+                className="mt-3 text-sm leading-5 text-accent"
               >
                 {errorMessage}
               </Text>
@@ -124,8 +124,8 @@ export default function LoginScreen() {
               accessibilityRole="button"
               accessibilityLabel="Sign in"
               accessibilityState={{ disabled: isSubmitting }}
-              className={`mt-6 min-h-14 items-center justify-center rounded-2xl bg-orange-600 px-4 ${
-                isSubmitting ? "opacity-60" : "active:bg-orange-700"
+              className={`mt-6 min-h-14 items-center justify-center rounded-2xl bg-accent px-4 ${
+                isSubmitting ? "opacity-60" : "active:bg-accent"
               }`}
               disabled={isSubmitting}
               onPress={handleLogin}
@@ -145,13 +145,13 @@ export default function LoginScreen() {
                 setErrorMessage("Password reset is not available yet.")
               }
             >
-              <Text className="text-sm font-semibold text-orange-600">
+              <Text className="text-sm font-semibold text-accent">
                 Forgot password?
               </Text>
             </Pressable>
           </View>
 
-          <Text className="mt-8 text-center text-sm text-slate-500">
+          <Text className="mt-8 text-center text-sm text-secondaryText">
             By continuing, you agree to our Terms and Privacy Policy.
           </Text>
         </ScrollView>
